@@ -2,6 +2,8 @@ package br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 public class Vara {
     @Id
@@ -13,7 +15,7 @@ public class Vara {
     @JoinColumn(referencedColumnName = "idTribunal")
     private Tribunal tribunal;
 
-    @OneToMany(mappedBy = "numeroProcesso")
-    private Processo processo;
+    @OneToMany
+    private List<Processo> processo;
 
 }

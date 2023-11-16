@@ -1,24 +1,24 @@
 package br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.*;
+import jdk.jfr.Name;
 
 import java.util.List;
 
 @Entity
+@Table(name = "advogados")
 public class Advogado {
     @Id
     private Long oabAdvogado;
     private String nomeAdvogado;
-    private Endereco enderecoAdvogado;
+    private String enderecoAdvogado;
     private String telefoneAdvogado;
     private String emailAdvogado;
-    @ManyToMany
-    private List<Processo> processosEnvolvidos;
+    @ManyToMany(mappedBy = "advogados")
+    private List<Processo> processos;
 
-    public Advogado(Long oabAdvogado, String nomeAdvogado, Endereco enderecoAdvogado, String telefoneAdvogado, String emailAdvogado) {
+    public Advogado(Long oabAdvogado, String nomeAdvogado, String enderecoAdvogado, String telefoneAdvogado, String emailAdvogado) {
         this.oabAdvogado = oabAdvogado;
         this.nomeAdvogado = nomeAdvogado;
         this.enderecoAdvogado = enderecoAdvogado;
@@ -29,41 +29,6 @@ public class Advogado {
     public Advogado() {
 
     }
-
-    public Long getOabAdvogado() {
-        return oabAdvogado;
-    }
-
-    public String getNomeAdvogado() {
-        return nomeAdvogado;
-    }
-
-    public String getTelefoneAdvogado() {
-        return telefoneAdvogado;
-    }
-    public String getEmailAdvogado() {
-        return emailAdvogado;
-    }
-
-    public void setOabAdvogado(Long oabAdvogado) {
-        this.oabAdvogado = oabAdvogado;
-    }
-
-    public void setNomeAdvogado(String nomeAdvogado) {
-        this.nomeAdvogado = nomeAdvogado;
-    }
-
-    public void setEnderecoAdvogado(Endereco enderecoAdvogado) {
-        this.enderecoAdvogado = enderecoAdvogado;
-    }
-
-    public void setTelefoneAdvogado(String telefoneAdvogado) {
-        this.telefoneAdvogado = telefoneAdvogado;
-    }
-    public void setEmailAdvogado(String emailAdvogado) {
-        this.emailAdvogado = emailAdvogado;
-    }
-
     public int registrarAdvogado(){
 
         return 0;

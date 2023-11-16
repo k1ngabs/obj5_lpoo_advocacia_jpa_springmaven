@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
+@Table(name = "audiencias")
 public class Audiencia {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idAudiencia;

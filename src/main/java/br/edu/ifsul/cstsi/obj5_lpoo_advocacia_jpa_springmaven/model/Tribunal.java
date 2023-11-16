@@ -5,11 +5,12 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
+@Table(name = "tribunais")
 public class Tribunal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idTribunal;
-    private Endereco enderecoTribunal;
+    private String enderecoTribunal;
 
     @OneToMany(mappedBy = "tribunal")
     @Column(nullable = false)

@@ -2,16 +2,18 @@ package br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.PrimaryKeyJoinColumn;
+import jakarta.persistence.Table;
 
 @Entity
+@PrimaryKeyJoinColumn(name = "pessoa_juridica")
 public class PessoaJuridica extends Pessoa {
-    @Id
     private long cnpjPessoa;
 
     public PessoaJuridica() {
     }
 
-    public PessoaJuridica(String nomePessoa, Endereco enderecoPessoa, String telefonePessoa, String emailPessoa) {
+    public PessoaJuridica(String nomePessoa, String enderecoPessoa, String telefonePessoa, String emailPessoa) {
         super(nomePessoa, enderecoPessoa, telefonePessoa, emailPessoa);
     }
 
@@ -19,7 +21,7 @@ public class PessoaJuridica extends Pessoa {
         this.cnpjPessoa = cnpjPessoa;
     }
 
-    public PessoaJuridica(String nomePessoa, Endereco enderecoPessoa, String telefonePessoa, String emailPessoa, long cnpjPessoa) {
+    public PessoaJuridica(String nomePessoa, String enderecoPessoa, String telefonePessoa, String emailPessoa, long cnpjPessoa) {
         super(nomePessoa, enderecoPessoa, telefonePessoa, emailPessoa);
         this.cnpjPessoa = cnpjPessoa;
     }
