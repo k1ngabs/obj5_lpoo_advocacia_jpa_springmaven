@@ -15,38 +15,5 @@ public class Advogado {
     private String enderecoAdvogado;
     private String telefoneAdvogado;
     private String emailAdvogado;
-    @ManyToMany(mappedBy = "advogados")
-    private List<Processo> processos;
 
-    public Advogado(Long oabAdvogado, String nomeAdvogado, String enderecoAdvogado, String telefoneAdvogado, String emailAdvogado) {
-        this.oabAdvogado = oabAdvogado;
-        this.nomeAdvogado = nomeAdvogado;
-        this.enderecoAdvogado = enderecoAdvogado;
-        this.telefoneAdvogado = telefoneAdvogado;
-        this.emailAdvogado = emailAdvogado;
-    }
-
-    public Advogado() {
-
-    }
-    public int registrarAdvogado(){
-
-        return 0;
-    }
-    public String consultaAdvogado(){
-        return "empty";
-    }
-    public String listarAdvogado(){
-        return "empty";
-    }
-    @Override
-    public String toString() {
-        return "Advogado{" +
-                "oabAdvogado=" + oabAdvogado +
-                ", nomeAdvogado='" + nomeAdvogado + '\'' +
-                ", enderecoAdvogado='" + enderecoAdvogado + '\'' +
-                ", telefoneAdvogado='" + telefoneAdvogado + '\'' +
-                ", emailAdvogado='" + emailAdvogado + '\'' +
-                '}';
-    }
 }

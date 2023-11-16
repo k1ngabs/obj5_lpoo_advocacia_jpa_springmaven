@@ -19,16 +19,6 @@ public class Processo {
     @Enumerated(EnumType.STRING)
     private Situacao situacaoProcesso;
 
-    //Mapeamento Many to Many:
-    @ManyToMany
-    @JoinTable(
-            name = "assume",
-            joinColumns = @JoinColumn(name = "id_processos"),
-            inverseJoinColumns = @JoinColumn(name = "id_advogados")
-
-    )
-    private List<Advogado> advogados;
-
     //Mapeamentos Many to One:
     @ManyToOne
     @JoinColumn(referencedColumnName = "idPessoa")
