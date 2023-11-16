@@ -15,7 +15,7 @@ public class Vara {
     @JoinColumn(referencedColumnName = "idTribunal")
     private Tribunal tribunal;
 
-    @OneToMany
+    @OneToMany(mappedBy = "vara")
     private List<Processo> processo;
 
 }
