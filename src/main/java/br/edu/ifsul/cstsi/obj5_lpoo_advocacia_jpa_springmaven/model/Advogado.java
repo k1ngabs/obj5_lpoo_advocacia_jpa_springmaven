@@ -3,25 +3,26 @@ package br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
+
+import java.util.List;
 
 @Entity
 public class Advogado {
     @Id
     private Long oabAdvogado;
     private String nomeAdvogado;
-    private String enderecoAdvogado;
+    private Endereco enderecoAdvogado;
     private String telefoneAdvogado;
-    private String bairroAdvogado;
-    private String cepAdvogado;
     private String emailAdvogado;
+    @ManyToMany
+    private List<Processo> processosEnvolvidos;
 
-    public Advogado(Long oabAdvogado, String nomeAdvogado, String enderecoAdvogado, String telefoneAdvogado, String bairroAdvogado, String cepAdvogado, String emailAdvogado) {
+    public Advogado(Long oabAdvogado, String nomeAdvogado, Endereco enderecoAdvogado, String telefoneAdvogado, String emailAdvogado) {
         this.oabAdvogado = oabAdvogado;
         this.nomeAdvogado = nomeAdvogado;
         this.enderecoAdvogado = enderecoAdvogado;
         this.telefoneAdvogado = telefoneAdvogado;
-        this.bairroAdvogado = bairroAdvogado;
-        this.cepAdvogado = cepAdvogado;
         this.emailAdvogado = emailAdvogado;
     }
 
@@ -37,22 +38,9 @@ public class Advogado {
         return nomeAdvogado;
     }
 
-    public String getEnderecoAdvogado() {
-        return enderecoAdvogado;
-    }
-
     public String getTelefoneAdvogado() {
         return telefoneAdvogado;
     }
-
-    public String getBairroAdvogado() {
-        return bairroAdvogado;
-    }
-
-    public String getCepAdvogado() {
-        return cepAdvogado;
-    }
-
     public String getEmailAdvogado() {
         return emailAdvogado;
     }
@@ -65,22 +53,13 @@ public class Advogado {
         this.nomeAdvogado = nomeAdvogado;
     }
 
-    public void setEnderecoAdvogado(String enderecoAdvogado) {
+    public void setEnderecoAdvogado(Endereco enderecoAdvogado) {
         this.enderecoAdvogado = enderecoAdvogado;
     }
 
     public void setTelefoneAdvogado(String telefoneAdvogado) {
         this.telefoneAdvogado = telefoneAdvogado;
     }
-
-    public void setBairroAdvogado(String bairroAdvogado) {
-        this.bairroAdvogado = bairroAdvogado;
-    }
-
-    public void setCepAdvogado(String cepAdvogado) {
-        this.cepAdvogado = cepAdvogado;
-    }
-
     public void setEmailAdvogado(String emailAdvogado) {
         this.emailAdvogado = emailAdvogado;
     }
@@ -102,8 +81,6 @@ public class Advogado {
                 ", nomeAdvogado='" + nomeAdvogado + '\'' +
                 ", enderecoAdvogado='" + enderecoAdvogado + '\'' +
                 ", telefoneAdvogado='" + telefoneAdvogado + '\'' +
-                ", bairroAdvogado='" + bairroAdvogado + '\'' +
-                ", cepAdvogado='" + cepAdvogado + '\'' +
                 ", emailAdvogado='" + emailAdvogado + '\'' +
                 '}';
     }
