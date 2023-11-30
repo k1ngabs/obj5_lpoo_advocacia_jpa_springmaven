@@ -8,6 +8,7 @@ public class Obj5LpooAdvocaciaJpaSpringmavenApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(Obj5LpooAdvocaciaJpaSpringmavenApplication.class, args);
+        HomeController.main(null);
     }
 
 }

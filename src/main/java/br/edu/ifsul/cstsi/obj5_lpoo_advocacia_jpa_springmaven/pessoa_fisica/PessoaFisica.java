@@ -1,13 +1,12 @@
-package br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.model;
+package br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.pessoa_fisica;
 
+import br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.pessoa.Pessoa;
 import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import jakarta.persistence.PrimaryKeyJoinColumn;
-import jakarta.persistence.Table;
 
 @Entity
 @PrimaryKeyJoinColumn(name = "pessoa_fisica")
-public class PessoaFisica extends Pessoa{
+public class PessoaFisica extends Pessoa {
     private String cpfPessoa;
     private String rgPessoa;
 

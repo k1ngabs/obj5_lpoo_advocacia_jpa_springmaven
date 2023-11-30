@@ -1,5 +1,10 @@
-package br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.model;
+package br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.processo;
 
+import br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.audiencia.Audiencia;
+import br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.custa.Custa;
+import br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.situacao.Situacao;
+import br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.vara.Vara;
+import br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.pessoa.Pessoa;
 import jakarta.persistence.*;
 
 import java.util.Date;

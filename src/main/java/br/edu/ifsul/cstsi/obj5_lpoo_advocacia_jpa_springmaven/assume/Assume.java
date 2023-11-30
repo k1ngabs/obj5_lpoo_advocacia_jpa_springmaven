@@ -1,9 +1,10 @@
-package br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.model;
+package br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.assume;
 
+import br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.advogado.Advogado;
+import br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.processo.Processo;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
-import java.util.List;
 
 @Entity
 @Table(name = "assume")

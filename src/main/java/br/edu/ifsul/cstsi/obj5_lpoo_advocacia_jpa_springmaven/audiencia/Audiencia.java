@@ -1,9 +1,9 @@
-package br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.model;
+package br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.audiencia;
 
+import br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.processo.Processo;
 import jakarta.persistence.*;
 
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Table(name = "audiencias")

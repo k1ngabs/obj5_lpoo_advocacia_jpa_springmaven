@@ -1,5 +1,7 @@
-package br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.model;
+package br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.vara;
 
+import br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.tribunal.Tribunal;
+import br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.processo.Processo;
 import jakarta.persistence.*;
 
 import java.util.List;

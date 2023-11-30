@@ -1,4 +1,4 @@
-package br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.model;
+package br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.endereco;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
