@@ -1,10 +1,9 @@
 package br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven;
 
 import br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.advogado.AdvogadoController;
-import br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.assume.AssumeController;
 import br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.pessoa.PessoaController;
+import br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.pessoa_fisica.PessoaFisicaController;
 import br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.processo.ProcessoController;
-import br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.tribunal.TribunalController;
 
 import java.util.Scanner;
 

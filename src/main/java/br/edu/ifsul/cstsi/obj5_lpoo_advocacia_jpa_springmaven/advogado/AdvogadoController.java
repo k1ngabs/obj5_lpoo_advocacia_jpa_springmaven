@@ -1,8 +1,6 @@
 package br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.advogado;
 
-import br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.pessoa.PessoaController;
 import br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.processo.ProcessoController;
-import org.springframework.core.SpringVersion;
 import org.springframework.stereotype.Controller;
 
 import java.util.Scanner;

@@ -1,17 +1,18 @@
 package br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.pessoa;
 
-import br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.advogado.Advogado;
+import org.hibernate.collection.spi.PersistentSortedMap;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
 public interface PessoaRepository extends JpaRepository {
-
-    @Query(value = "SELECT a from Pessoa a WHERE a.nomePessoa = ?1")
-    List<Pessoa> findPessoaByName(String name);
-    @Query(value = "SELECT a FROM Pessoa a WHERE a.emailPessoa = ?1")
-    List<Pessoa> findPessoaByEmail(String email);
-    @Query(value = "SELECT a FROM Pessoa a WHERE a.telefonePessoa = ?1")
-    List<Advogado> findPessoaByTelefone(String tel);
+    @Query(value = "SELECT p FROM Pessoa p where p.nomePessoa = ?1")
+    List<Pessoa> findByNome(String nome);
+    @Query(value = "SELECT p from Pessoa p where p.emailPessoa = ?1")
+    List<Pessoa> findByEmail(String email);
+    @Query(value = "select p from Pessoa p where p.enderecoPessoa = ?1")
+    List<Pessoa> findByEnd(String end);
+    @Query(value = "select p from Pessoa p where p.telefonePessoa = ?1")
+    List<Pessoa> findByTel(String tel);
 }
