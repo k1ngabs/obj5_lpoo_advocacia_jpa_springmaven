@@ -15,7 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 public abstract class Pessoa {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idPessoa;
+    private Long idPessoa;
     private String nomePessoa;
     private String enderecoPessoa;
     private String telefonePessoa;
@@ -32,11 +32,11 @@ public abstract class Pessoa {
         this.emailPessoa = emailPessoa;
     }
 
-    public long getIdPessoa() {
+    public Long getIdPessoa() {
         return idPessoa;
     }
 
-    public void setIdPessoa(long idPessoa) {
+    public void setIdPessoa(Long idPessoa) {
         this.idPessoa = idPessoa;
     }
 

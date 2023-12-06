@@ -7,7 +7,7 @@ import jakarta.persistence.PrimaryKeyJoinColumn;
 @Entity
 @PrimaryKeyJoinColumn(name = "pessoa_juridica")
 public class PessoaJuridica extends Pessoa {
-    private long cnpjPessoa;
+    private Long cnpjPessoa;
 
     public PessoaJuridica() {
     }

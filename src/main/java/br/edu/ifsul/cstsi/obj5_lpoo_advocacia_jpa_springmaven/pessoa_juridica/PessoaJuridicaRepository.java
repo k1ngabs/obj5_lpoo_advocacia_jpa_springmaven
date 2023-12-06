@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-public interface PessoaJuridicaRepository extends JpaRepository {
+public interface PessoaJuridicaRepository extends JpaRepository<PessoaJuridica,Long> {
     @Query(value = "select p from PessoaJuridica p WHERE p.cnpjPessoa = ?1")
     List<PessoaJuridica> findByCNPJ(String cnpjPessoa);
 

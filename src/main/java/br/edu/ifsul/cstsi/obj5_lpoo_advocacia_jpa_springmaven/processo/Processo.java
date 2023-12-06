@@ -14,7 +14,7 @@ import java.util.List;
 @Table(name = "processos")
 public class Processo {
     @Id
-    private long numeroProcesso;
+    private Long numeroProcesso;
     private Date aberturaProcesso;
     @Column(nullable = true)
     private Date conclusaoProcesso;

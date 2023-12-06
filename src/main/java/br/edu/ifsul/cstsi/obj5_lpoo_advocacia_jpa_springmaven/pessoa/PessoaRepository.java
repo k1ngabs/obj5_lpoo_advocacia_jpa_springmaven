@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-public interface PessoaRepository extends JpaRepository {
+public interface PessoaRepository extends JpaRepository<Pessoa, Long> {
     @Query(value = "SELECT p FROM Pessoa p where p.nomePessoa = ?1")
     List<Pessoa> findByNome(String nome);
     @Query(value = "SELECT p from Pessoa p where p.emailPessoa = ?1")

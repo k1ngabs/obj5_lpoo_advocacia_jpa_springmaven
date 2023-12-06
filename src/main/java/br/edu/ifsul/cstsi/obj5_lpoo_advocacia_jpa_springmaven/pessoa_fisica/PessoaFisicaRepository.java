@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-public interface PessoaFisicaRepository extends JpaRepository {
+public interface PessoaFisicaRepository extends JpaRepository<PessoaFisica, Long> {
     @Query(value = "SELECT p from PessoaFisica p WHERE p.cpfPessoa like ?1")
     List<PessoaFisica> findByCPF(String cpfPessoa);
     @Query(value = "SELECT p FROM PessoaFisica p WHERE p.rgPessoa like ?1")
