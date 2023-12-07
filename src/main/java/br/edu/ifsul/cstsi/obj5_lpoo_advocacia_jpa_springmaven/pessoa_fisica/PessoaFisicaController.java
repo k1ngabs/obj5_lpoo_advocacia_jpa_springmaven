@@ -2,11 +2,13 @@ package br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.pessoa_fisica;
 
 import br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.HomeController;
 import br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.advogado.AdvogadoController;
+import br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.pessoa.Pessoa;
 import br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.processo.Processo;
 import br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.processo.ProcessoController;
 import br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.processo.ProcessoService;
 import org.springframework.stereotype.Controller;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Scanner;
 
@@ -170,7 +172,7 @@ public class PessoaFisicaController {
 
     private static void searchName(){
         System.out.print("Digite o nome da pessoa: ");
-        List<PessoaFisica> pf = PFService.getPessoaFisicaByName(input.nextLine());
+        Pessoa pf =PFService.getPessoaByName(input.nextLine());
         if (pf != null){
             System.out.println("Pessoa encontrada. " + pf);
         } else {
@@ -199,7 +201,7 @@ public class PessoaFisicaController {
     }
     private static void searchEmail(){
         System.out.print("Digite o email da pessoa: ");
-        PessoaFisica pf = PFService.getPessoaByEmail(input.nextLine());
+        Pessoa pf = PFService.getPessoaByEmail(input.nextLine());
         if (pf != null){
             System.out.println("Pessoa encontrada. " + pf);
         } else {

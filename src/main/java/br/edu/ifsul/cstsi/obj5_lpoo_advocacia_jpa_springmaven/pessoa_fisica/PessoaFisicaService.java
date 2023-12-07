@@ -1,5 +1,6 @@
 package br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.pessoa_fisica;
 
+import br.edu.ifsul.cstsi.obj5_lpoo_advocacia_jpa_springmaven.pessoa.Pessoa;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
@@ -24,18 +25,23 @@ public class PessoaFisicaService {
         }
         return null;
     }
-    public List<PessoaFisica> getPessoaFisicaByName(String nome){
-        return new ArrayList<>(rep.findByNome(nome + "%"));
+    public Pessoa getPessoaByName(String nome){
+        Optional<Pessoa> opt = rep.findByNome(nome);
+        if(opt.isPresent()){
+            return opt.get();
+        }
+        return null;
     }
     public PessoaFisica getPessoaFisicaByCpf(String cpf){
-    return (PessoaFisica) rep.findByCPF(cpf);
-    }
+        Optional<PessoaFisica> opt = rep.findByCPF(cpf);
+        if (opt.isPresent()) return opt.get();
+        return null;}
     public PessoaFisica getPessoaFisicaByRg(String rg){
         return (PessoaFisica) rep.findByRG(rg);
     }
 
-    public PessoaFisica getPessoaByEmail(String email){
-        return (PessoaFisica) rep.findByEmail(email);
+    public Pessoa getPessoaByEmail(String email){
+        return (Pessoa) rep.findByEmail(email);
     }
 
     //Create

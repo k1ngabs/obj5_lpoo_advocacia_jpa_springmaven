@@ -41,8 +41,12 @@ public class PessoaFisica extends Pessoa {
 
     @Override
     public String toString() {
-        return "PessoaFisica{" +
-                "cpfPessoa='" + cpfPessoa + '\'' +
+        return "\nPessoaFisica{" +
+                "Nome: " + getNomePessoa() + '\'' +
+                ", Email: " + getEmailPessoa() + '\'' +
+                ", Endereco: " + getEnderecoPessoa() + '\'' +
+                ", Telefone: " + getTelefonePessoa() + '\'' +
+                ", cpfPessoa='" + cpfPessoa + '\'' +
                 ", rgPessoa='" + rgPessoa + '\'' +
                 '}';
     }
