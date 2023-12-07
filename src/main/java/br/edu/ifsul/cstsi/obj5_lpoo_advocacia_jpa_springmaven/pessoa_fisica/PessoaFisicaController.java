@@ -97,26 +97,32 @@ public class PessoaFisicaController {
             if (c == 1){
                 System.out.println(pf.getNomePessoa());
                 System.out.println("Digite o novo nome:");
+                input.nextLine();
                 pf.setNomePessoa(input.nextLine());
             } else if (c == 2) {
                 System.out.println(pf.getCpfPessoa());
                 System.out.println("Digite o novo CPF:");
+                input.nextLine();
                 pf.setCpfPessoa(input.nextLine());
             } else if (c == 3) {
                 System.out.println(pf.getRgPessoa());
                 System.out.println("Digite o novo RG:");
+                input.nextLine();
                 pf.setRgPessoa(input.nextLine());
             } else if (c == 4) {
                 System.out.println(pf.getEmailPessoa());
                 System.out.println("Digite o novo Email:");
+                input.nextLine();
                 pf.setEmailPessoa(input.nextLine());
             } else if (c == 5) {
                 System.out.println(pf.getTelefonePessoa());
                 System.out.println("Digite o novo Telefone:");
+                input.nextLine();
                 pf.setTelefonePessoa(input.nextLine());
             } else if (c == 6) {
                 System.out.println(pf.getEnderecoPessoa());
                 System.out.println("Digite o novo endereco:");
+                input.nextLine();
                 pf.setEnderecoPessoa(input.nextLine());
             }
         if(PFService.update(pf) != null){
